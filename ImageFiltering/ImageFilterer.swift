@@ -13,7 +13,10 @@ class ImageFilterer {
     let context = CIContext(options: nil)
     
     func filterImage(_ image: UIImage?) -> UIImage? {
-        // Remove this `return nil` when you work on this function. This is just here to have the compiler not throw an error.
-        return nil
+        // I think this works? I'll send you the bill
+        let cIImage = CIImage(image: image!)
+        return UIImage(ciImage: cIImage!.applyingFilter("CIPhotoEffectInstant"))
     }
 }
+
+
