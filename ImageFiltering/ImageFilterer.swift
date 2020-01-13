@@ -17,7 +17,7 @@ class ImageFilterer {
         
         guard let image = UIImage(named: "Lion") else { return nil }
         let ciInput = CIImage(image: image)
-        filter?.setValue(ciInput, forKey: "Lion")
+        filter?.setValue(ciInput, forKey: kCIInputImageKey)
         
         let ciOuput = filter?.outputImage
         let ciContext = CIContext()
